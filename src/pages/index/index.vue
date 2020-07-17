@@ -1,19 +1,20 @@
 <template>
   <view class="index">
-    <NumberDisplay/>
-    <NumberSubmit/>
+    <my-swiper @tap="openEditor" @change="swiperChange" :imgUrls="imgUrls" />
   </view>
 </template>
 
 <script>
-import NumberDisplay from '../../components/NumberDisplay.vue'
-import NumberSubmit from '../../components/NumberSubmit.vue'
+import MySwiper from '../../components/bussiness/SelectModel.vue'
 
 export default {
   name: 'Index',
   components: {
-    NumberDisplay,
-    NumberSubmit
+    MySwiper
+  },
+  mixins: [],
+  created () {
+    
   }
 }
 </script>
